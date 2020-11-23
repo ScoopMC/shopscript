@@ -1,0 +1,13 @@
+options:
+	#					#
+	#		Config		#
+	#					#
+
+	# Hvor meget man får pr. kill
+	kill-reward: 25
+
+on death of player:
+	if attacker is a player:
+		add {@kill-reward} to attacker's balance
+		send "&7[&a!&7] &aDu har modtaget &l${@kill-reward}&a for at dræbe en spiller!" to attacker
+
